@@ -137,7 +137,7 @@ if name == "python":
 
 logical operators
 ------------------
-and or  not
+and or  not 
 
 name = "python"
 if name.isupper()  and len(name) == 6 :
@@ -166,7 +166,382 @@ if 'p' in "python":
 
 
 
-as
+working with flat files ( csv conf log rtf txt .. )
+-------------------------------------------------
+read mode
+write mode
+append mode
+
+
+opening the file
+------------------
+
+
+syntax:  object = open(filename,mode)
+example:   fobj = open("customers.txt","r")    #read mode
+           # In read mode , if file is not existing ... it will display error message           
+
+           fobj = open("customers.txt","w")    #write mode
+           case1:  if file is not existing ... file gets created first
+           case2:  if file is already existing.. it overwrites the existing content first
+
+           fobj = open("customers.txt","a")    #append mode
+           case1:  if file is not existing ... file gets created first
+           case2:  if file is already existing.. it appends the data to the end of the file
+
+
+closing the file
+------------------
+object.close()
+
+
+
+read operation
+---------------
+
+reading line by line using file object
+fobj.read()
+fobj.readlines()
+using csv library
+using pandas library ( mainly used in analytics projects )
+
+
+
+
+exception handling
+---------------------
+
+Basically there are 2 types of errors.
+
+1. syntax error
+2. semantic error or runtime error
+
+Handling the exceptions in runtime is known as exception handling
+
+
+try
+except
+else
+finally
+
+
+
+
+
+
+
+
+
+
+user defined functions 
+
+function|block|submodule|definition
+------------------------------------
+reusability purpose
+
+ways of passing parameters
+---------------------------
+
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+library | module | routines | package
+------------------------------------
+Every library contains set of methods.
+
+
+builtin library   ( 3000+ libraries )
+----------------
+builtin libraries are generally used( OS operations , math operations , date and time operations , file operations .... )  by everyone in day-day operations
+
+third party library    ( 360000+ libraries )
+--------------------
+Depending on the customized requirement ( data analytics , cloud related , ML , Image processsing , networking automations, database handling...) developer has to use third party library and should be installed from 
+
+-www.pypi.org
+- using pip tool
+- using easy_tool tool
+- conda tool
+
+
+
+
+builtin libraries which are generally used
+----------------------------------------
+sys           : system python config information
+urllib.request: working with http
+requests      : API programming( creating and consuming rest api's)
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml        
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+frequently used third party libraries
+---------------------------------------
+database related
+----------------
+pymysql   :
+cx_Oracle
+pymongo
+pymssql
+
+web frameworks ( developing web applications)
+--------------
+django
+flask
+bottom
+
+analytics/machine learning
+---------------------------
+numpy
+scipy
+pandas
+seaborn
+plotly
+ggplot
+matplotlib   : visualizing data .. bar graph.. pie graph
+scikit-learn :  machine learning algorithms
+
+image processing
+---------------
+pillow
+opencv
+pytorch
+
+
+APIs ( REST API)
+-----
+requests
+
+excel programming
+------------------
+openpyxl    : reading/write excel files
+xlsxwriter  : writing to excel file
+python-docx : working with ms-word
+pandas
+
+networking
+-----------
+paramiko   :  interacting with remote servers
+netmiko    :  connecting to router/switch
+pyping     :  ping any host or ip address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OOP concepts
+----------
+
+
+class
+------
+Class is just like blueprint of any model
+Every class contains data members( variables) and member functions( definitions)
+
+
+object
+-------
+object is the instance of the class.
+
+
+self
+-----
+self is the instance of the object
+
+
+re
+---
+regular expression
+
+
+- search ( anywhere in the string)
+- match  ( at the beginning of the string ONLY)
+- sub    ( replacing)
+- findall( find all the patterns)
+- split  ( split the pattern)
+
+wild card characters or meta characters
+(common across all the languages )
+---------------------------------------
+
+^   : at the beginning of the string
+
+$   : at the  end of the string
+      if re.search("python$",line):
+
+
+*   : zero or more occurences of the preceding character
+      if re.search("pyt*hon",line):
+
++   : one or more occurences of the preceding character
+
+.   : any single character or digit or symbol other than \n \d \s
+      if re.search(".ython",line):
+
+?   : either 0 or 1 occurence of the preceding character
+      if re.search("pyt?hon",line):
+
+()  :  grouping
+       (python|perl)
+        if re.search("pyt*hon|unix|perl|java",line):
+
+[]   : character class  - one single character
+       if re.search("[qwmt]ython",line):
+
+{}   : {min,max}
+       if re.search("pyt{1,5}hon",line):  min -1    max 5
+       if re.search("pyt{1,}hon",line):   min -1    max : no limit
+       if re.search("pyt{1}hon",line):    exactly 1 time
+
+\d : digit
+\w : word
+\s : whitespaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+working with third party files  ( pdf doc docx pptx xlsx rar tar .... )
 
 
 
